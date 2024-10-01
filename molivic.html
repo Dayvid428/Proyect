@@ -13,22 +13,47 @@
         }
         /* Encabezado logo y navegación */
         header {
+            display: flex;
+            justify-content: space-between; /* Espacio entre logo y navegación */
+            align-items: center; /* Centra verticalmente */
             background: #ffffff;
             color: #000000;
             padding: 5px 20px;
-            text-align: left;
+        }
+        /* Sección de botones de contacto */
+        .contact-buttons {
+            display: flex;
+            margin-left: auto; /* Mover botones a la derecha */
+        }
+        .contact-button {
+            background-color: #25D366; /* Color de fondo de WhatsApp */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px; /* Espacio entre botones */
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
         }
         /* Sección de pestañas de navegación */
         nav {
             background: #000000c5;
             padding: 10px 0; /* Reduce el padding superior e inferior */
-            text-align: center;
         }
         /* Fuente de pestañas */
         nav a {
-            margin: 0 15px;
+            margin: 0 25px; /* Aumentar el margen lateral */
+            padding: 10px 15px; /* Añadir padding para alargar las pestañas */
             text-decoration: none;
             color: #ffffff;
+            border-radius: 5px; /* Opcional: añade bordes redondeados */
+            transition: background 0.3s; /* Efecto de transición al pasar el mouse */
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
         }
         main {
             padding: 20px;
@@ -77,6 +102,7 @@
             align-items: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
         }
         .whatsapp-icon img {
             max-width: 70%; /* Tamaño del ícono */
@@ -87,15 +113,21 @@
 <body>
     <header>
         <h1><img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/logo.jpg" alt="Título" style="max-width: 100%; height: auto;"></h1>
-        <nav>
+        <div class="contact-buttons">
+            <button class="contact-button" onclick="window.open('https://wa.me/51988460274', '_blank')">WhatsApp</button>
+            <button class="contact-button" onclick="window.location.href='mailto:moliviceirl@gmail.com'">Email</button>
+        </div>
+    </header>
+    <nav>
+        <div style="display: flex; justify-content: flex-end; padding: 10px 20px;">
             <a href="#" onclick="showSection('inicio')">Inicio</a>
             <a href="#" onclick="showSection('ubicanos')">Conócenos</a>
             <a href="#" onclick="showSection('productos')">Productos</a>
             <a href="#" onclick="showSection('galeria')">Galería</a>
             <a href="#" onclick="showSection('clientes')">Clientes</a>
             <a href="#" onclick="showSection('blog')">Blog</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <main>
         <section id="inicio" style="display: block;"> <!-- Mostrar solo Inicio por defecto -->
             <h2>Inicio</h2>
@@ -163,10 +195,9 @@
         <p>&copy; 2024 Industrias de Jebe Molivic EIRL. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Icono de WhatsApp -->
-    <a href="https://wa.me/51988460274" class="whatsapp-icon" target="_blank">
+    <div class="whatsapp-icon" onclick="window.open('https://wa.me/51988460274', '_blank')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+    </div>
 
     <script>
         function showSection(sectionId) {
