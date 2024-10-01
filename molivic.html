@@ -34,9 +34,15 @@
             margin-left: 10px; /* Espacio entre botones */
             cursor: pointer;
             transition: background 0.3s;
+            display: flex; /* Usar flex para centrar íconos y texto */
+            align-items: center; /* Centrar verticalmente */
         }
         .contact-button:hover {
             background: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
+        }
+        .contact-button img {
+            width: 20px; /* Tamaño del ícono */
+            margin-right: 5px; /* Espacio entre ícono y texto */
         }
         /* Sección de pestañas de navegación */
         nav {
@@ -114,8 +120,12 @@
     <header>
         <h1><img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/logo.jpg" alt="Título" style="max-width: 100%; height: auto;"></h1>
         <div class="contact-buttons">
-            <button class="contact-button" onclick="window.open('https://wa.me/51988460274', '_blank')">WhatsApp</button>
-            <button class="contact-button" onclick="window.location.href='mailto:moliviceirl@gmail.com'">Email</button>
+            <button class="contact-button" onclick="window.open('https://wa.me/51988460274', '_blank')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
+            </button>
+            <button class="contact-button" onclick="window.location.href='mailto:moliviceirl@gmail.com'">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Email_icon_%28black%29.svg" alt="Email">Email
+            </button>
         </div>
     </header>
     <nav>
