@@ -6,117 +6,110 @@
     <title>Molivic | Industrias de Jebe E.I.R.L.</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Tipo de letra de la página */
-            margin: 0; /* Sin margen */
-            padding: 0; /* Sin relleno */
-            background-color: #f4f4f4; /* Color de fondo de la página */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        /* Estilos para el encabezado, logo y navegación */
         header {
-            display: flex; /* Usa flexbox para alinear elementos */
-            justify-content: space-between; /* Espacio entre logo y navegación */
-            align-items: center; /* Centra verticalmente */
-            background: #ffffff; /* Color de fondo blanco */
-            color: #000000; /* Color del texto negro */
-            padding: 5px 20px; /* Espaciado interno */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            color: #000000;
+            padding: 5px 20px;
         }
-        /* Sección de botones de contacto */
         .contact-buttons {
-            display: flex; /* Usa flexbox para alinear los botones horizontalmente */
-            margin-left: auto; /* Mueve los botones a la derecha */
+            display: flex;
+            margin-left: auto;
         }
         .contact-button {
-            background-color: #25D366; /* Color de fondo del botón de WhatsApp */
-            color: #ffffff; /* Color del texto en blanco */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            padding: 10px 15px; /* Espaciado interno */
-            margin-left: 10px; /* Espacio entre botones */
-            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-            transition: background 0.3s; /* Efecto de transición al cambiar el fondo */
-            display: flex; /* Usar flex para centrar íconos y texto */
-            align-items: center; /* Centrar verticalmente */
+            background-color: #25D366;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
         }
         .contact-button:hover {
-            background: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
+            background: rgba(255, 255, 255, 0.2);
         }
-        /* Cambia el color del botón de email a negro */
         .contact-button.email-button {
-            background-color: #000000; /* Color de fondo negro para el botón de email */
+            background-color: #000000;
         }
         .contact-button img {
-            width: 20px; /* Tamaño del ícono */
-            margin-right: 5px; /* Espacio entre ícono y texto */
+            width: 20px;
+            margin-right: 5px;
         }
-        /* Estilos para la barra de navegación */
         nav {
-            background: #000000c5; /* Color de fondo de la barra de navegación */
-            padding: 10px 0; /* Espaciado superior e inferior */
+            background: #000000c5;
+            padding: 10px 0;
         }
-        /* Estilos para los enlaces de navegación */
         nav a {
-            margin: 0 25px; /* Margen lateral */
-            padding: 10px 15px; /* Espaciado interno */
-            text-decoration: none; /* Sin subrayado */
-            color: #ffffff; /* Color del texto en blanco */
-            border-radius: 5px; /* Bordes redondeados */
-            transition: background 0.3s; /* Efecto de transición al pasar el mouse */
+            margin: 0 25px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #ffffff;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
         nav a:hover {
-            background: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
+            background: rgba(255, 255, 255, 0.2);
         }
         main {
-            padding: 20px; /* Espaciado interno de la sección principal */
+            padding: 20px;
         }
         section {
-            margin-bottom: 40px; /* Margen inferior entre secciones */
-            padding: 20px; /* Espaciado interno */
-            background: #ffffff; /* Color de fondo blanco para las secciones */
-            border-radius: 5px; /* Bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor de las secciones */
-            display: none; /* Ocultar todas las secciones por defecto */
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
         }
         footer {
-            text-align: center; /* Centrar texto en el pie de página */
-            padding: 10px 0; /* Espaciado interno */
-            background: #35424a; /* Color de fondo del pie de página */
-            color: #ffffff; /* Color del texto en blanco */
-            position: relative; /* Posición relativa */
-            bottom: 0; /* Ajustar al fondo */
-            width: 100%; /* Ancho completo */
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-        /* Estilos para el carrusel de imágenes */
         .carousel {
-            position: relative; /* Posición relativa para el carrusel */
-            max-width: 100%; /* Ancho máximo del carrusel */
-            overflow: hidden; /* Ocultar el desbordamiento */
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
         }
         .carousel img {
-            width: 100%; /* Imagen ocupa todo el ancho */
-            display: none; /* Ocultar todas las imágenes por defecto */
+            width: 100%;
+            display: none;
         }
         .carousel img.active {
-            display: block; /* Mostrar la imagen activa */
+            display: block;
         }
-        /* Estilos para el ícono de WhatsApp flotante */
         .whatsapp-icon {
-            position: fixed; /* Posición fija en la pantalla */
-            bottom: 20px; /* Distancia desde el fondo */
-            right: 20px; /* Distancia desde la derecha */
-            width: 60px; /* Tamaño del ícono */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
             height: 60px;
-            background-color: #25D366; /* Color de fondo de WhatsApp */
-            border-radius: 50%; /* Bordes redondeados para forma circular */
-            display: flex; /* Usar flex para centrar el ícono */
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor del ícono */
-            z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
-            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
         }
         .whatsapp-icon img {
-            max-width: 70%; /* Tamaño del ícono */
-            height: auto; /* Altura automática */
+            max-width: 70%;
+            height: auto;
         }
     </style>
 </head>
@@ -125,41 +118,43 @@
         <h1>
             <a href="#" onclick="showSection('inicio')">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/logo.jpg" 
-                     alt="Título" style="max-width: 100%; height: auto;"> <!-- Logotipo de la página -->
+                     alt="Título" style="max-width: 100%; height: auto;">
             </a>
         </h1>
         <div class="contact-buttons">
-            <!-- Botón de WhatsApp -->
             <button class="contact-button" onclick="window.open('https://wa.me/51988460274', '_blank')">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/wp_icon.png" 
-                     alt="WhatsApp">+51 988 460 274
+                     alt="WhatsApp" width="80" height="40">
+                <span>Contáctanos <br> +51 988 460 274</span>
             </button>
-            <!-- Botón de Email, con clase específica para el color negro -->
             <button class="contact-button email-button" onclick="window.location.href='mailto:moliviceirl@gmail.com'">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/email_icon.png" 
-                     alt="Email">moliviceirl@gmail.com
+                     alt="Email" width="80" height="40">
+                <span>Escríbenos <br> moliviceirl@gmail.com</span>
             </button>
         </div>
     </header>
     <nav>
         <div style="display: flex; justify-content: flex-end; padding: 10px 20px;">
-            <!-- Enlaces de navegación -->
             <a href="#" onclick="showSection('inicio')">Inicio</a>
             <a href="#" onclick="showSection('ubicanos')">Conócenos</a>
             <a href="#" onclick="showSection('productos')">Productos</a>
             <a href="#" onclick="showSection('galeria')">Galería</a>
-            <a href="#" onclick="showSection('clientes')">Clientes</a>
-            <a href="#" onclick="showSection('blog')">Blog</a>
         </div>
     </nav>
     <main>
-        <section id="inicio" style="display: block;"> <!-- Mostrar solo la sección de Inicio por defecto -->
+        <section id="inicio" style="display: block;">
             <h2>Inicio</h2>
             <p>Bienvenido a nuestra página. Aquí encontrarás toda la información que necesitas.</p>
             <div class="carousel">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/main/ima_1.jpg" alt="Imagen 1" class="active">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/main/ima_2.jpg" alt="Imagen 2">
                 <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/main/ima_3.jpg" alt="Imagen 3">
+            </div>
+            <div style="margin-top: 40px;">
+                <h3>Información Adicional</h3>
+                <p>Aquí puedes agregar más texto, imágenes o cualquier otro contenido relevante.</p>
+                <img src="ruta-de-tu-imagen-adicional.jpg" alt="Contenido adicional" style="max-width: 100%; height: auto;">
             </div>
         </section>
 
@@ -168,7 +163,6 @@
             <p>Somos una empresa dedicada a ofrecer lo mejor a nuestros clientes.</p>
             <div style="display: flex; margin-top: 20px;">
                 <div style="flex: 1; margin-right: 20px;">
-                    <!-- Mapa de ubicación -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.9723700409596!2d-77.06822719821213!3d-11.92046545433682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1cd4a1de8d7%3A0xf5518b255d8c553c!2sIndustria%20de%20Jebe%20Molivic%20EIRL!5e0!3m2!1ses-419!2spe!4v1727359730821!5m2!1ses-419!2spe" 
                         width="600" 
                         height="450" 
@@ -193,62 +187,46 @@
         </section>
 
         <section id="productos">
-            <h2>Productos</h2>
+            <h2>Productos</h2> 
             <p>Explora nuestra gama de productos innovadores.</p>
-            <img src="ruta-de-tu-imagen-productos.jpg" alt="Productos" style="max-width: 100%; height: auto;"> <!-- Aquí puedes poner la ruta de la imagen de tus productos -->
+            <img src="ruta-de-tu-imagen-productos.jpg" alt="Productos" style="max-width: 100%; height: auto;">
         </section>
         
         <section id="galeria">
             <h2>Galería</h2>
             <p>Visita nuestra galería para ver nuestros productos en acción.</p>
-            <img src="ruta-de-tu-imagen-galeria.jpg" alt="Galería" style="max-width: 100%; height: auto;"> <!-- Ruta de la imagen de la galería -->
-        </section>
-        
-        <section id="clientes">
-            <h2>Clientes</h2>
-            <p>Conoce a nuestros valiosos clientes y sus testimonios.</p>
-            <img src="ruta-de-tu-imagen-clientes.jpg" alt="Clientes" style="max-width: 100%; height: auto;"> <!-- Ruta de la imagen de clientes -->
-        </section>
-        
-        <section id="blog">
-            <h2>Blog</h2>
-            <p>Lee nuestras últimas noticias y actualizaciones en el blog.</p>
-            <img src="ruta-de-tu-imagen-blog.jpg" alt="Blog" style="max-width: 100%; height: auto;"> <!-- Ruta de la imagen del blog -->
+            <img src="ruta-de-tu-imagen-galeria.jpg" alt="Galería" style="max-width: 100%; height: auto;">
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Industrias de Jebe Molivic EIRL. Todos los derechos reservados.</p> <!-- Pie de página con derechos de autor -->
+        <p>&copy; 2024 Industrias de Jebe Molivic EIRL. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Icono de WhatsApp flotante -->
     <div class="whatsapp-icon" onclick="window.open('https://wa.me/51988460274', '_blank')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </div>
 
     <script>
-        // Función para mostrar secciones al hacer clic en los enlaces de navegación
         function showSection(sectionId) {
-            const sections = document.querySelectorAll('main section'); // Selecciona todas las secciones
+            const sections = document.querySelectorAll('main section');
             sections.forEach(section => {
-                section.style.display = 'none'; // Oculta todas las secciones
+                section.style.display = 'none';
             });
-            const selectedSection = document.getElementById(sectionId); // Selecciona la sección a mostrar
-            selectedSection.style.display = 'block'; // Muestra la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
         }
 
-        // Carrusel de imágenes
-        let currentIndex = 0; // Índice de la imagen actual
-        const images = document.querySelectorAll('.carousel img'); // Selecciona todas las imágenes en el carrusel
-        const totalImages = images.length; // Total de imágenes en el carrusel
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
 
-        // Función para mostrar la siguiente imagen
         function showNextImage() {
-            images[currentIndex].classList.remove('active'); // Oculta la imagen actual
-            currentIndex = (currentIndex + 1) % totalImages; // Calcula el siguiente índice
-            images[currentIndex].classList.add('active'); // Muestra la nueva imagen activa
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
         }
 
-        setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
+        setInterval(showNextImage, 3000);
     </script>
 </body>
 </html>
