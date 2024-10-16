@@ -62,7 +62,7 @@
             background: rgba(255, 255, 255, 0.2);
         }
         main {
-            padding: 20px;
+            padding: 0;
         }
         
         footer {
@@ -105,9 +105,21 @@
             max-width: 70%;
             height: auto;
         }
+        #ubicanos {
+            margin: 0; /* Elimina márgenes */
+            padding: 0; /* Elimina padding si es necesario */
+            overflow: hidden; /* Para evitar desbordes */   
+        }
+
+        #ubicanos img {
+            width: 100%; /* La imagen ocupará todo el ancho */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Evita espacios debajo de la imagen */
+        }
+
     </style>
 </head>
-<body>
+<body onload="showSection('inicio')">
     <header>
         <h1>
             <a href="#" onclick="showSection('inicio')">
@@ -151,31 +163,16 @@
         </section>
 
         <section id="ubicanos" >
-            <h2>Ubicanos</h2>
-            <div style="margin-top: 40px;">
-                <img src="https://raw.githubusercontent.com/Dayvid428/Proyect/refs/heads/master/imagenes/Contactenos.png" alt="Contenido adicional" style="max-width: 100%; height: auto;">
+            <div style="margin-top: 0;">
+                <img src="https://github.com/Dayvid428/Proyect/blob/master/imagenes/Contactanos1.png?raw=true" alt="Contenido adicional" style="max-width: 100%; height: auto;">
             </div>
-            <div style="display: flex; margin-top: 20px;">
-                <div style="flex: 1; margin-right: 20px;">
+            <div style="display: flex; margin-top: 0;">
+                <div style="flex: 1; margin-right: 0; max-width: 100%;">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.9723700409596!2d-77.06822719821213!3d-11.92046545433682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1cd4a1de8d7%3A0xf5518b255d8c553c!2sIndustria%20de%20Jebe%20Molivic%20EIRL!5e0!3m2!1ses-419!2spe!4v1727359730821!5m2!1ses-419!2spe" 
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
+                        style="border:0; width: 100%; height: 450px;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div style="flex: 1;">
-                    <h3>Encuéntranos en:</h3>
-                    <p>Av. Tambo Rio Psje. Comun Lote 34 Q Fnd. Chacra Cerro - Lima - Comas</p>
-                    <h3>Horarios de atención:</h3>
-                    <p>Lunes a Viernes: 8:00am - 5:00pm</p>
-                    <p>Sabado: 8:00am - 1:00pm</p>
-                    <h3>Teléfonos:</h3>
-                    <p>(01) 000 0000 / (01) 431 4551</p>
-                    <p>Móvil: 988 460 274</p>
-                    <h3>Email:</h3>
-                    <p>moliviceirl@gmail.com</p>
                 </div>
             </div>
         </section>
